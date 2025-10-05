@@ -6,9 +6,16 @@
     <title>Non-Scrollable Responsive Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       html,
       body {
@@ -18,28 +25,34 @@
         overflow: hidden; /* Prevent scrolling */
         font-weight: 500;
         font-style: normal;
-        font-family: "Poppins", sans-serif;
-  font-weight: 500;
+        font-family: "Noto Sans Malayalam", sans-serif;
+
+        font-weight: 500;
       }
 
       body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #002b5a;
+        /* background: rgb(0, 71, 171); */
+        background: linear-gradient(
+          159deg,
+          rgb(28, 0, 188) 0%,
+          rgb(0, 161, 197) 100%
+        );
       }
 
       .container {
         width: 90vw;
         height: 90vh;
         /* background-color: white; */
-        background-image: url(asset/image/map1.jpg);
+        background-image: url(asset/image/map1.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100vw;
         background-position: center center;
         /* opacity: 0.5; */
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -58,7 +71,7 @@
         font-size: 2vw;
         margin: 0.5rem 0;
         font-weight: 900;
-        color: #002b5a;
+        color: #ffffff;
       }
 
       @media (max-width: 600px) {
@@ -70,58 +83,50 @@
         }
       }
 
-      .blur-button {
-        padding: 1rem 2rem;
-        background: rgba(184, 218, 255, 0.714); /* Transparent blue */
-        color: #002b5a;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 12px;
-        backdrop-filter: blur(10px); /* Blur behind the button */
-        -webkit-backdrop-filter: blur(10px);
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
+      .button img {
+        /* opacity: 0; */
+        /* background-image: url(asset/image/appstore.png); */
+        border: solid 1px #000000;
+        border-radius: 20px;
+        padding: 0 5px;
+        background-color: #ffffffbe;
       }
-
-      .blur-button:hover {
-        background: rgba(0, 123, 255, 0.4);
-        transform: scale(1.05);
-        color: rgb(52, 10, 104);
-        font-weight: 700;
-      }
-      #blurred-container {
-        width: 90%;
-      max-width: 500px;
-      padding: 2rem;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.1); /* transparent white */
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(2px); /* Glass blur effect */
-      -webkit-backdrop-filter: blur(2px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      text-align: center;
+      .button img:hover {
+        background-color: #ffffff; /* Background color on hover */
       }
     </style>
   </head>
   <body>
+    <div>
+              <img src="asset/image/logowhite.png" alt="" style="position: absolute; top: 10px;left: 10px;max-width: 200px;" />
+
+    </div>
     <div class="container">
       <div id="blurred-container">
-        <img src="asset/image/logo.png" alt="">
-      <p>
-        കേരളത്തിലെ ഡോക്ടർ മാരെ കൺസൾട്ട് ചെയ്യൂ!
+        <p>
+          കേരളത്തിലെ ഡോക്ടർമാരെ <br />
+          കൺസൾട്ട് ചെയ്യൂ!
 
-        <br />
-        Consult Doctors in Kerala!
-      </p>
-      <div>
+          <br />
+          <br>
+          Consult Doctors in Kerala!
+        </p>
         <div>
-          <button class="blur-button">Click Me</button>
+          <div style="display: flex;
+  /* justify-content: space-around;  */
+  justify-content: center;
+  align-items: center;">
+  <div style="padding:  10px;"><a type="button" href="https://google.com" class="button">
+              <img src="asset/image/appstore.png" style="width: 100px" alt="" />
+            </a></div>
+            
+            <div style="padding: 10px;"><a type="button" href="https://google.com" class="button" style="display: inline-block;">
+              <img src="asset/image/playstore.png"  style="width: 100px" alt="" />
+            </a></div>
+            
+          </div>
         </div>
       </div>
-
-      </div>
-      
-      
     </div>
   </body>
 </html>
