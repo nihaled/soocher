@@ -47,7 +47,21 @@
         justify-content: center;
         align-items: center;
         /* background: rgb(0, 71, 171); */
-        background-image: linear-gradient(to right bottom, #2300eb, #1f00df, #1a00d3, #1600c7, #1100bb, #0025c5, #003bce, #004dd6, #0073ed, #0095f9, #00b3fe, #00d0ff);
+        background-image: linear-gradient(
+          to right bottom,
+          #2300eb,
+          #1f00df,
+          #1a00d3,
+          #1600c7,
+          #1100bb,
+          #0025c5,
+          #003bce,
+          #004dd6,
+          #0073ed,
+          #0095f9,
+          #00b3fe,
+          #00d0ff
+        );
       }
 
       .container {
@@ -188,9 +202,11 @@
     <div>
       <img class="logo" src="asset/image/SucherAppLogowhite.png" alt="" />
     </div>
-    <div class="container" onscroll="hideElement3()">
+    <div class="container">
       <div class="pt-5">
         <p>
+          <br />
+          <br />
           കേരളത്തിലെ ഡോക്ടർമാരെ <br />
           കൺസൾട്ട് ചെയ്യൂ!
           <br />
@@ -210,7 +226,7 @@
               href="https://google.com"
               class="button"
               style="display: inline-block"
-              >
+            >
               <!-- <div style="margin-bottom: -10px; z-index: 100">
                 Download Now
               </div> -->
@@ -227,17 +243,9 @@
         </div>
       </div>
     </div>
-    <section class="py-5 mb-5" >
+    <section class="py-5 mb-5">
       <div class="pt-4 pb-2">
-        <h4
-          class="text-white text-center"
-          id="myElement"
-          
-          onmouseover="hideElement()"
-          
-        >
-          Frequently Asked Question (FAQ)
-        </h4>
+        <h4 class="text-white text-center">Frequently Asked Question (FAQ)</h4>
       </div>
       <div class="accordion w-75 mx-auto">
         <div class="accordion-item">
@@ -333,13 +341,10 @@
       </div>
     </section>
     <script>
-      window.addEventListener('scroll', function() {
+      window.addEventListener("scroll", function () {
         document.getElementById("targetSectionId").style.display = "none";
-    });
-      
-      function hideElement() {
-        document.getElementById("targetSectionId").style.display = "none";
-      }
+      });
+
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
