@@ -6,7 +6,7 @@
     <title>Soocher App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <link
       href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -25,7 +25,6 @@
     <style>
       html,
       body {
-
         font-weight: 500;
         font-style: normal;
         font-family: "Anek Malayalam", sans-serif;
@@ -83,21 +82,21 @@
         color: #ffffff;
       }
 
-            /* @media (max-width: 700px) {
+      /* @media (max-width: 700px) {
                p {
           font-size: 7vw;
         }
             } */
-             .maltext{
-          margin-bottom: 50px;
-        }
+      .maltext {
+        margin-bottom: 50px;
+      }
 
       @media (max-width: 500px) {
         .logo {
           max-width: 40vw;
           margin-top: 5vh;
         }
-        .container{
+        .container {
           padding-top: 120px;
         }
         h1 {
@@ -106,7 +105,7 @@
         p {
           font-size: 9vw;
         }
-        .maltext{
+        .maltext {
           margin-bottom: 50px;
         }
         .button img {
@@ -118,9 +117,10 @@
         /* .container_mouse {
           padding-top: 150px;
         } */
-         .scrolldiv{
-          min-height: 120px; padding-top: 50px;
-         }
+        .scrolldiv {
+          min-height: 120px;
+          padding-top: 50px;
+        }
       }
       @media (min-width: 500px) {
         /* .container{
@@ -132,10 +132,10 @@
           background-color: #ffffff; /* Background color on hover */
           width: 20vw;
         }
-         .scrolldiv{
-          min-height: 120px; 
+        .scrolldiv {
+          min-height: 120px;
           /* padding-top: 30px; */
-         }
+        }
         /* .container_mouse {
         
         padding-top: 5rem;
@@ -158,7 +158,7 @@
 
       :root {
         --color: rgba(255, 255, 255, 0.918);
-        --bs-accordion-bg: var( transparent) !important;
+        --bs-accordion-bg: var(transparent) !important;
       }
 
       .container_mouse {
@@ -194,11 +194,9 @@
         animation: scrolling 1s linear infinite;
       }
 
-      .accordion{
+      .accordion {
         background-color: transparent !important;
       }
-
-          
 
       @keyframes scrolling {
         0% {
@@ -212,35 +210,34 @@
         }
       }
 
+      /* for making accordion buttons transparent */
+      .accordion-button {
+        background-color: transparent !important; /* !important might be needed to override Bootstrap's default styles */
+        color: #ffffff;
+        font-size: 1.25rem;
+      }
 
-              /* for making accordion buttons transparent */
-        .accordion-button {
-          background-color: transparent !important; /* !important might be needed to override Bootstrap's default styles */
-          color: #ffffff;
-        }
+      /* for making the entire accordion item transparent */
+      .accordion-item {
+        background-color: transparent;
+        color: #ffffff;
+      }
 
-        /* for making the entire accordion item transparent */
-        .accordion-item {
-          background-color: transparent;
-          color: #ffffff;
-        }
-
-        /* for making the accordion body transparent */
-        .accordion-body {
-          background-color: transparent;
-          color: #ffffff;
-        }
-        .accordion-button:not(.collapsed){
-          background-color: transparent;
-          color: #ffffff;
-        }
-        .accordion-button.collapsed::after {
-          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-        }
-        .accordion-button:not(.collapsed)::after {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-
-        }
+      /* for making the accordion body transparent */
+      .accordion-body {
+        background-color: transparent;
+        color: #ffffff;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: transparent;
+        color: #ffffff;
+      }
+      .accordion-button.collapsed::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
     </style>
   </head>
   <body>
@@ -250,26 +247,30 @@
     <div class="container">
       <div class="pt-5">
         <p>
-          
-        കേരളത്തിലെ ഡോക്ടർമാരെ <br />
-          കൺസൾട്ട് ചെയ്യൂ!</p>
-          <p>Consult Doctors in Kerala!</p>
-        
+          കേരളത്തിലെ ഡോക്ടർമാരെ <br />
+          കൺസൾട്ട് ചെയ്യൂ!
+        </p>
+        <p>Consult Doctors in Kerala!</p>
+
         <div>
           <div style="padding: 10px">
-            <a type="button"
+            <a
+              type="button"
               href="https://google.com"
               class="button"
-              style="display: inline-block" >
+              style="display: inline-block"
+            >
               <img src="asset/image/appstore.png" alt="" />
             </a>
           </div>
 
           <div style="padding: 10px">
-            <a type="button"
+            <a
+              type="button"
               href="https://google.com"
               class="button"
-              style="display: inline-block">
+              style="display: inline-block"
+            >
               <img src="asset/image/playstore.png" alt="" />
             </a>
           </div>
@@ -284,50 +285,98 @@
       </div>
     </div>
     <section class="my-5">
-      <div class=" py-5">
-        <h2 class="text-white text-center">Frequently Asked Question (FAQ)</h2>
+      <div class="py-5">
+        <h2 class="text-white h2 text-center">
+          Frequently Asked Question (FAQ)
+        </h2>
       </div>
 
-
-      
-      <div class="accordion accordion  w-75 mx-auto" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header accordion">
-      <button class="accordion-button h5 collapsed accordion" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body h5 accordion">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button h5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body h5">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button h5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body h5">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-</div>
+      <div class="accordion accordion w-75 mx-auto" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header accordion">
+            <button
+              class="accordion-button collapsed accordion"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Frequently Asked Question1
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body h5 accordion">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              first item’s accordion body.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Frequently Asked Question2
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body h5">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              second item’s accordion body. Let’s imagine this being filled with
+              some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Frequently Asked Question3
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body h5">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              third item’s accordion body. Nothing more exciting happening here
+              in terms of content, but just filling up the space to make it
+              look, at least at first glance, a bit more representative of how
+              this would look in a real-world application.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script>
       window.addEventListener("scroll", function () {
         document.getElementById("targetSectionId").style.display = "none";
       });
-
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
