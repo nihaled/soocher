@@ -19,10 +19,11 @@
     <style>
       html,
       body {
-        margin: 0;
+        /* margin: 0;
         padding: 0;
-        height: 100%;
-        overflow: hidden; /* Prevent scrolling */
+        height: 100%; */
+        /* overflow: hidden;  */
+        /* Prevent scrolling */
         font-weight: 500;
         font-style: normal;
         font-family: "Noto Sans Malayalam", sans-serif;
@@ -30,7 +31,7 @@
       }
 
       body {
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         align-items: center;
         /* background: rgb(0, 71, 171); */
@@ -42,13 +43,13 @@
       }
 
       .container {
-        width: 90vw;
-        height: 90vh;
+        /* width: 100vw; */
+        height: 100vh;
         /* background-color: white; */
         background-image: url(asset/image/map1.png);
         background-repeat: no-repeat;
         /* background-size: 100vw; */
-        background-size:cover ;
+        background-size: cover;
         background-position: center center;
         /* opacity: 0.5; */
         /* border-radius: 10px;
@@ -58,7 +59,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 1rem;
         box-sizing: border-box;
       }
 
@@ -68,7 +68,7 @@
       }
 
       p {
-        font-size: 2vw;
+        font-size: 3vw;
         margin: 0.5rem 0;
         font-weight: 900;
         color: #ffffff;
@@ -81,52 +81,137 @@
         p {
           font-size: 6vw;
         }
+        .button img {
+          border-radius: 10px;
+          padding: 0 5px;
+          background-color: #ffffff; /* Background color on hover */
+          width: 40vw;
+        }
       }
-
+      @media (min-width: 600px) {
+        .button img {
+          border-radius: 10px;
+          padding: 0 5px;
+          background-color: #ffffff; /* Background color on hover */
+          width: 20vw;
+        }
+      }
       .button img {
         /* opacity: 0; */
         /* background-image: url(asset/image/appstore.png); */
         border: solid 1px #000000;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 0 5px;
         background-color: #ffffff; /* Background color on hover */
       }
       .button img:hover {
         background-color: #ffffffbe;
       }
+
+    
+
+
+      :root {
+  --color: rgba(255, 255, 255, 0.918);
+}
+
+body {
+  background-color: #ffffff;
+}
+
+      .container_mouse {
+  text-align: center;
+  color: var(--color);
+  font-weight: bold;
+  text-transform: uppercase;
+  /* padding-top: 2rem; */
+  cursor: pointer;
+}
+
+.container_mouse .mouse-btn {
+  margin: 10px auto;
+  width: 20px;
+  height: 40px;
+  border: 1px solid var(--color);
+  border-radius: 30px;
+  display: flex;
+}
+
+.container_mouse .mouse-btn .mouse-scroll {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.918), rgb(255, 255, 255));
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling 1s linear infinite;
+}
+
+
+
+
+
+
+@keyframes scrolling {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
     </style>
   </head>
   <body>
     <div>
-              <img src="asset/image/logowhite.png" alt="" style="position: absolute; top: 10px;left: 10px;max-width: 200px;" />
-
+      <img
+        src="asset/image/SucherAppLogowhite.png"
+        alt=""
+        style="position: absolute; top: 10px; left: 10px; max-width: 200px"
+      />
     </div>
     <div class="container">
-      <div id="blurred-container">
+      <div>
         <p>
           കേരളത്തിലെ ഡോക്ടർമാരെ <br />
           കൺസൾട്ട് ചെയ്യൂ!
-
           <br />
-          <br>
+          <br />
           Consult Doctors in Kerala!
         </p>
         <div>
-          <div style="display: flex;
-  /* justify-content: space-around;  */
-  justify-content: center;
-  align-items: center;">
-  <div style="padding:  10px;"><a type="button" href="https://google.com" class="button">
-              <img src="asset/image/appstore.png" style="width: 100px" alt="" />
-            </a></div>
-            
-            <div style="padding: 10px;"><a type="button" href="https://google.com" class="button" style="display: inline-block;">
-              <img src="asset/image/playstore.png"  style="width: 100px" alt="" />
-            </a></div>
-            
+          <div style="padding: 10px">
+            <a type="button" href="https://google.com" class="button">
+              <img src="asset/image/appstore.png" alt="" />
+            </a>
+          </div>
+
+          <div style="padding: 10px">
+            <a
+              type="button"
+              href="https://google.com"
+              class="button"
+              style="display: inline-block"
+            >
+              <img src="asset/image/playstore.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
+      <div class="container_mouse">
+    <span class="mouse-btn">
+        <span class="mouse-scroll"></span>
+    </span>
+</div>
+      
+      
     </div>
+    <section style="border-top: #ffffff 1px solid; width: 100%;">
+
+        <h1>faq</h1>
+      </section>
   </body>
 </html>
