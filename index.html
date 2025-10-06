@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <style>
       html,
       body {
@@ -61,7 +67,12 @@
         text-align: center;
         box-sizing: border-box;
       }
-
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        max-width: 200px;
+      }
       h1 {
         font-size: 4vw;
         margin: 0.5rem 0;
@@ -75,6 +86,9 @@
       }
 
       @media (max-width: 600px) {
+        .logo {
+          max-width: 40vw;
+        }
         h1 {
           font-size: 6vw;
         }
@@ -86,6 +100,9 @@
           padding: 0 5px;
           background-color: #ffffff; /* Background color on hover */
           width: 40vw;
+        }
+        .container_mouse {
+          padding-top: 3rem;
         }
       }
       @media (min-width: 600px) {
@@ -108,70 +125,58 @@
         background-color: #ffffffbe;
       }
 
-    
-
-
       :root {
-  --color: rgba(255, 255, 255, 0.918);
-}
-
-body {
-  background-color: #ffffff;
-}
+        --color: rgba(255, 255, 255, 0.918);
+      }
 
       .container_mouse {
-  text-align: center;
-  color: var(--color);
-  font-weight: bold;
-  text-transform: uppercase;
-  /* padding-top: 2rem; */
-  cursor: pointer;
-}
+        text-align: center;
+        color: var(--color);
+        font-weight: bold;
+        text-transform: uppercase;
+        /* padding-top: 2rem; */
+        cursor: pointer;
+      }
 
-.container_mouse .mouse-btn {
-  margin: 10px auto;
-  width: 20px;
-  height: 40px;
-  border: 1px solid var(--color);
-  border-radius: 30px;
-  display: flex;
-}
+      .container_mouse .mouse-btn {
+        margin: 10px auto;
+        width: 20px;
+        height: 40px;
+        border: 1px solid var(--color);
+        border-radius: 30px;
+        display: flex;
+      }
 
-.container_mouse .mouse-btn .mouse-scroll {
-  display: block;
-  width: 15px;
-  height: 15px;
-  background: linear-gradient(170deg, rgba(255, 255, 255, 0.918), rgb(255, 255, 255));
-  border-radius: 50%;
-  margin: auto;
-  animation: scrolling 1s linear infinite;
-}
+      .container_mouse .mouse-btn .mouse-scroll {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: linear-gradient(
+          170deg,
+          rgba(255, 255, 255, 0.918),
+          rgb(255, 255, 255)
+        );
+        border-radius: 50%;
+        margin: auto;
+        animation: scrolling 1s linear infinite;
+      }
 
+      @keyframes scrolling {
+        0% {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
 
-
-
-
-
-@keyframes scrolling {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(10px);
-  }
-}
+        100% {
+          opacity: 1;
+          transform: translateY(10px);
+        }
+      }
     </style>
   </head>
   <body>
     <div>
-      <img
-        src="asset/image/SucherAppLogowhite.png"
-        alt=""
-        style="position: absolute; top: 10px; left: 10px; max-width: 200px"
-      />
+      <img class="logo" src="asset/image/SucherAppLogowhite.png" alt="" />
     </div>
     <div class="container">
       <div>
@@ -202,16 +207,115 @@ body {
         </div>
       </div>
       <div class="container_mouse">
-    <span class="mouse-btn">
-        <span class="mouse-scroll"></span>
-    </span>
-</div>
-      
-      
+        <span class="mouse-btn">
+          <span class="mouse-scroll"></span>
+        </span>
+      </div>
     </div>
-    <section style="border-top: #ffffff 1px solid; width: 100%;">
-
-        <h1>faq</h1>
-      </section>
+    <section style="border-top: #ffffff 1px solid; width: 100%">
+      <h1 class="">faq</h1>
+      <div class="accordion w-50 mx-auto bg-transparent" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the first item’s accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
