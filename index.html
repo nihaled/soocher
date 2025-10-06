@@ -151,6 +151,7 @@
 
       :root {
         --color: rgba(255, 255, 255, 0.918);
+        --bs-accordion-bg: var( transparent) !important;
       }
 
       .container_mouse {
@@ -185,6 +186,12 @@
         animation: scrolling 1s linear infinite;
       }
 
+      .accordion{
+        background-color: transparent !important;
+      }
+
+          
+
       @keyframes scrolling {
         0% {
           opacity: 0;
@@ -196,6 +203,36 @@
           transform: translateY(10px);
         }
       }
+
+
+      /* Example for making accordion buttons transparent */
+.accordion-button {
+  background-color: transparent !important; /* !important might be needed to override Bootstrap's default styles */
+  color: #ffffff;
+}
+
+/* Example for making the entire accordion item transparent */
+.accordion-item {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+/* Example for making the accordion body transparent */
+.accordion-body {
+  background-color: transparent;
+  color: #ffffff;
+}
+.accordion-button:not(.collapsed){
+   background-color: transparent;
+  color: #ffffff;
+}
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+}
     </style>
   </head>
   <body>
@@ -247,9 +284,11 @@
       <div class="pt-4 pb-2">
         <h4 class="text-white text-center">Frequently Asked Question (FAQ)</h4>
       </div>
-      <div class="accordion w-75 mx-auto">
+
+
+      <!-- <div class="accordion w-75 mx-auto">
         <div class="accordion-item">
-          <h2 class="accordion-header bg-transparent">
+          <h2 class="accordion-header accordion">
             <button
               class="accordion-button collapsed"
               type="button"
@@ -338,7 +377,39 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+      <div class="accordion accordion  w-75 mx-auto" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header accordion">
+      <button class="accordion-button collapsed accordion" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body accordion">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
     </section>
     <script>
       window.addEventListener("scroll", function () {
