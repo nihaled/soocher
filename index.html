@@ -6,12 +6,7 @@
     <title>Non-Scrollable Responsive Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -30,23 +25,16 @@
     <style>
       html,
       body {
-        /* margin: 0;
-        padding: 0;
-        height: 100%; */
-        /* overflow: hidden;  */
-        /* Prevent scrolling */
+
         font-weight: 500;
         font-style: normal;
-        /* font-family: "Noto Sans Malayalam", sans-serif; */
         font-family: "Anek Malayalam", sans-serif;
         font-weight: 500;
       }
 
       body {
-        /* display: flex; */
-        justify-content: center;
-        align-items: center;
-        /* background: rgb(0, 71, 171); */
+        /* justify-content: center;
+        align-items: center; */
         background-image: linear-gradient(
           to right bottom,
           #2300eb,
@@ -65,17 +53,11 @@
       }
 
       .container {
-        /* width: 100vw; */
         height: 100vh;
-        /* background-color: white; */
         background-image: url(asset/image/map1.png);
         background-repeat: no-repeat;
-        /* background-size: 100vw; */
         background-size: cover;
         background-position: center center;
-        /* opacity: 0.5; */
-        /* border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -95,11 +77,18 @@
       }
 
       p {
-        font-size: 6vw;
+        font-size: 4vw;
         margin: 0.5rem 0;
         font-weight: 900;
         color: #ffffff;
       }
+
+            /* @media (max-width: 700px) {
+               p {
+          font-size: 7vw;
+        }
+            } */
+
 
       @media (max-width: 500px) {
         .logo {
@@ -110,7 +99,7 @@
           font-size: 6vw;
         }
         p {
-          font-size: 8vw;
+          font-size: 9vw;
         }
         .button img {
           border-radius: 10px;
@@ -205,34 +194,34 @@
       }
 
 
-      /* Example for making accordion buttons transparent */
-.accordion-button {
-  background-color: transparent !important; /* !important might be needed to override Bootstrap's default styles */
-  color: #ffffff;
-}
+              /* for making accordion buttons transparent */
+        .accordion-button {
+          background-color: transparent !important; /* !important might be needed to override Bootstrap's default styles */
+          color: #ffffff;
+        }
 
-/* Example for making the entire accordion item transparent */
-.accordion-item {
-  background-color: transparent;
-  color: #ffffff;
-}
+        /* for making the entire accordion item transparent */
+        .accordion-item {
+          background-color: transparent;
+          color: #ffffff;
+        }
 
-/* Example for making the accordion body transparent */
-.accordion-body {
-  background-color: transparent;
-  color: #ffffff;
-}
-.accordion-button:not(.collapsed){
-   background-color: transparent;
-  color: #ffffff;
-}
-.accordion-button.collapsed::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-.accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        /* for making the accordion body transparent */
+        .accordion-body {
+          background-color: transparent;
+          color: #ffffff;
+        }
+        .accordion-button:not(.collapsed){
+          background-color: transparent;
+          color: #ffffff;
+        }
+        .accordion-button.collapsed::after {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 
-}
+        }
     </style>
   </head>
   <body>
@@ -264,9 +253,7 @@
               class="button"
               style="display: inline-block"
             >
-              <!-- <div style="margin-bottom: -10px; z-index: 100">
-                Download Now
-              </div> -->
+              
               <img src="asset/image/playstore.png" alt="" />
             </a>
           </div>
