@@ -188,7 +188,7 @@
     <div>
       <img class="logo" src="asset/image/SucherAppLogowhite.png" alt="" />
     </div>
-    <div class="container">
+    <div class="container" onscroll="hideElement3()">
       <div class="pt-5">
         <p>
           കേരളത്തിലെ ഡോക്ടർമാരെ <br />
@@ -227,13 +227,14 @@
         </div>
       </div>
     </div>
-    <section class="py-5 mb-5">
+    <section class="py-5 mb-5" >
       <div class="pt-4 pb-2">
         <h4
           class="text-white text-center"
           id="myElement"
+          
           onmouseover="hideElement()"
-          onscroll="hideElement()"
+          
         >
           Frequently Asked Question (FAQ)
         </h4>
@@ -332,16 +333,10 @@
       </div>
     </section>
     <script>
-      // Get references to the elements
-      const triggerSection = document.getElementById("triggerSectionId");
-      const targetSection = document.getElementById("targetSectionId");
-
-      // Add an event listener to the trigger section
-      triggerSection.addEventListener("onmouseover", () => {
-        // When the trigger section is clicked, hide the target section
-        targetSection.style.display = "none";
-      });
-
+      window.addEventListener('scroll', function() {
+        document.getElementById("targetSectionId").style.display = "none";
+    });
+      
       function hideElement() {
         document.getElementById("targetSectionId").style.display = "none";
       }
